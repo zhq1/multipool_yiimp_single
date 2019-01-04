@@ -102,9 +102,13 @@ php-imagick php-gettext php7.2-zip php7.2-mbstring \
 fail2ban ntpdate python3 python3-dev python3-pip \
 curl git sudo coreutils pollinate unzip unattended-upgrades cron \
 nginx pwgen libgmp3-dev libmysqlclient-dev libcurl4-gnutls-dev \
-libkrb5-dev libldap2-dev libidn11-dev gnutls-dev librtmp-dev \
+libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git cmake libboost-all-dev zlib1g-dev libz-dev libseccomp-dev libcap-dev libminiupnpc-dev \
+libkrb5-dev libldap2-dev libidn11-dev libssl-dev gnutls-dev librtmp-dev libminiupnpc10 libzmq5 libcanberra-gtk-module libqrencode-dev libzmq3-dev \
 build-essential libtool autotools-dev automake pkg-config openssl libevent-dev bsdmainutils --allow-downgrades
 
+sudo add-apt-repository -y ppa:bitcoin/bitcoin
+sudo apt-get -y update
+sudo apt-get install -y libdb4.8-dev libdb4.8++-dev libdb5.3 libdb5.3++
 
 echo Downloading selected YiiMP Repo...
 hide_output sudo git clone ${YiiMPRepo} $STORAGE_ROOT/yiimp/yiimp_setup/yiimp
