@@ -93,6 +93,19 @@ hide_output apt-get -y --purge autoremove
 fi
 hide_output sudo apt-get update
 
+sudo apt -y install libgmp3-dev
+sudo apt -y install libmysqlclient-dev
+sudo apt -y install libcurl4-gnutls-dev
+sudo apt -y install libkrb5-dev
+sudo apt -y install libldap2-dev
+sudo apt -y install libidn11-dev
+sudo apt -y install gnutls-dev
+sudo apt -y install librtmp-dev
+sudo apt -y install sendmail
+sudo apt -y install mutt
+sudo apt -y install git screen
+sudo apt -y install pwgen -y
+
 apt_install php7.2-fpm php7.2-opcache php7.2-fpm php7.2 php7.2-common php7.2-gd \
 php7.2-mysql php7.2-imap php7.2-cli php7.2-cgi \
 php-pear php-auth-sasl mcrypt imagemagick libruby \
@@ -109,6 +122,8 @@ build-essential libtool autotools-dev automake pkg-config openssl libevent-dev b
 sudo add-apt-repository -y ppa:bitcoin/bitcoin
 sudo apt-get -y update
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev libdb5.3 libdb5.3++
+
+
 
 echo Downloading selected YiiMP Repo...
 hide_output sudo git clone ${YiiMPRepo} $STORAGE_ROOT/yiimp/yiimp_setup/yiimp
